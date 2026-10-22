@@ -1,0 +1,30 @@
+name: Keep old clients upgradeable
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/transition-release.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: transition-release
+  cancel-in-progress: false
+
+jobs:
+  bridge:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          repository: stmluyuer/NetBurrow
+          ref: f79ad010e2bc6e2c774cbaa4eca1bfb04234fe6f
+          persist-credentials: false
+      - name: Copy the verified transition package without changing assets
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/github-release.py copy --source stmluyuer/NetBurrow --tags v0.2.6

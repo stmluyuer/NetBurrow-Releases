@@ -1,32 +1,20 @@
-# NetBurrow
+# NetBurrow 已迁移
 
-适用于《以撒的结合：忏悔+》的 Windows 好友联机工具。
+源码、客户端下载、更新说明和问题反馈已统一到 **[stmluyuer/NetBurrow](https://github.com/stmluyuer/NetBurrow)**。
 
-本仓库用于发布编译后的客户端、更新说明和收集问题反馈，不包含项目源码。
+- [下载最新客户端](https://github.com/stmluyuer/NetBurrow/releases/latest)
+- [使用与服务器部署说明](https://github.com/stmluyuer/NetBurrow#readme)
+- [更新日志](https://github.com/stmluyuer/NetBurrow/blob/main/CHANGELOG.md)
+- [问题反馈](https://github.com/stmluyuer/NetBurrow/issues)
 
-## 下载与使用
+## 旧客户端如何升级
 
-从 [最新 Release](https://github.com/stmluyuer/NetBurrow-Releases/releases/latest) 下载 `NetBurrow-<版本>-win-x64.zip`。GitHub 自动生成的 Source code 压缩包不是客户端，请不要下载错。
+0.2.5 及更早客户端的检查与下载地址固定在本仓库。本仓库保留 **0.2.6 的完整客户端 ZIP 和 latest.json**，旧版仍可在“关于”页检查并下载这个过渡版本；升级后将从主仓库检查后续更新。也可以直接从上面的主仓库下载最新版。
 
-1. 将 ZIP 完整解压到固定目录，保持 `NetBurrow.exe`、`netburrow-injector.exe`、`netburrow_hook.dll` 在同一目录。
-2. 打开 `NetBurrow.exe`，填写你与朋友使用的 Relay 地址，确认游戏路径指向实际的 `isaac-ng.exe`。本工具需要可用的 Relay，不包含公共服务器或预设连接信息。
-3. 创建联机组，将组码私下分享给朋友；双方使用相同的服务器和完整组码。
-4. 点击“启用联机”，等待连接成功后，从 Steam 正常启动游戏，按游戏原有流程邀请朋友。
+更新前请退出游戏和 NetBurrow，将完整 ZIP 解压到新文件夹。本机设置会保留，请勿混用不同版本的客户端、注入器和 Hook。本次仓库迁移无需更新 Relay。
 
-客户端适用于 Windows x64，目标游戏程序为 32 位《忏悔+》。无法读取 EXE 文件版本不代表游戏版本错误，也不代表已经验证游戏兼容性。
+## 历史版本与兼容入口
 
-## 更新
+原有 v0.1.21、v0.2.4、v0.2.5 的附件继续保留，主仓库也保存了原包副本。本仓库仅保留旧链接和旧客户端升级入口，不再承担后续正式版本发布。
 
-“关于”页可手动检查更新，查看版本说明并在浏览器下载新版。
-
-“自动检测更新”默认关闭。开启时检查一次，以后每次启动检查一次，不定时轮询。检查失败可手动重试，不影响联机。
-
-下载新版后，先退出游戏和 NetBurrow，将完整 ZIP 解压到新文件夹，再启动新版。不要混用不同版本的客户端、注入器和 Hook，也不要在游戏仍运行时覆盖 DLL。工具不会自动安装更新。
-
-本机设置保存在 `%LOCALAPPDATA%\NetBurrow`，正常更新不会清除设置。发行包不包含个人设置、组码、服务器地址或日志。
-
-## 问题反馈
-
-在 [Issues](https://github.com/stmluyuer/NetBurrow-Releases/issues) 中说明客户端版本、问题现象和复现步骤。
-
-组码是加入联机组的凭据，请勿公开。不要上传 `settings.json`、令牌或未经检查的日志。提供诊断材料前请检查其中是否包含个人信息。
+请勿删除本仓库、0.2.6 过渡包或其更新清单，否则尚未升级的旧客户端将无法通过原入口获取更新。使用和反馈请以主仓库为准。

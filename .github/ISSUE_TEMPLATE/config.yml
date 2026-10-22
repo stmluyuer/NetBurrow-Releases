@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 到 NetBurrow 主仓库反馈问题
+    url: https://github.com/stmluyuer/NetBurrow/issues/new
+    about: 源码、下载和反馈已统一到主仓库，请在这里提交。
